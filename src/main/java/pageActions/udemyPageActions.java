@@ -26,17 +26,17 @@ public class udemyPageActions extends Base {
 	
 
 	browserUtilities bu = new browserUtilities();
-	WebDriverWait wait = new WebDriverWait(driver, 10);
+	
 
 	public void dataScience() {
 		
 		driver.findElement(udemyPageObject.Search).sendKeys("Data Science");
-		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(udemyPageObject.PythonDataScience)).click();
 		
 	}
 	public void courseContent() throws InterruptedException {
-			
+		WebDriverWait wait = new WebDriverWait(driver, 10);	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(udemyPageObject.AddToCart));
 		
 		
